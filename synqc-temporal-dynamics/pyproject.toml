@@ -1,0 +1,24 @@
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synqc-temporal-dynamics"
+version = "0.2.0"
+description = "Drive–Probe–Drive (DPD) simulation with demodulation and adaptive tracking."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name="SynQc Team"}]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = ["matplotlib"]
+
+[project.urls]
+Homepage = "https://example.com/synqc"
+Repository = "https://github.com/example/synqc-temporal-dynamics"

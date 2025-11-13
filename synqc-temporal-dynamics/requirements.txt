@@ -1,0 +1,2 @@
+# Core runtime dependencies for synqc-temporal-dynamics
+matplotlib
