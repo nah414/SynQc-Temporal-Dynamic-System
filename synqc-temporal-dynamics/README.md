@@ -37,9 +37,23 @@ pip install -e .
 python examples/simulate_dpd.py
 ```
 
+If your environment is missing `pandas` 3.x or `numpy`, you can bootstrap them with:
+
+```bash
+python utils/install_deps.py
+```
+
+For offline or proxy-restricted environments, first cache wheels for `pandas` (3.x),
+`numpy`, and `pyyaml`, then point the installer at that directory so tests can run
+without PyPI access:
+
+```bash
+python utils/install_deps.py --wheel-dir /path/to/wheels
+```
+
 ### Offline or air-gapped environments
 
-If you run in a restricted network, pre-download a `matplotlib` wheel and place it in a local directory. Then
+If you run in a restricted network, pre-download wheels for `pandas` (3.x), `numpy`, `pyyaml`, and `matplotlib` and place them in a local directory. Then
 
 ```bash
 pip install --no-index --find-links /path/to/wheels -r requirements.txt
